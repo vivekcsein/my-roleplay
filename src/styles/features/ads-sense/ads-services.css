@@ -1,0 +1,53 @@
+.li-layout-split {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr) 160px;
+  gap: 24px;
+  align-items: start;
+
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-inline: 16px;
+}
+
+.li-layout-split__content {
+  min-width: 0;
+}
+
+.li-layout-split__rail {
+  position: sticky;
+  top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Below ~1180px there isn't room for two 160px rails without cramping the
+   page content, so the rails drop out entirely rather than squeezing. */
+@media (max-width: 1180px) {
+  .li-layout-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .li-layout-split__rail {
+    display: none;
+  }
+}
+
+.li-partner-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.li-partner-slot__label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}

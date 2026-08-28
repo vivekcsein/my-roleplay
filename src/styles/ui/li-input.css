@@ -1,0 +1,87 @@
+.lifeinvader-input {
+  /* Shadcn-compatible semantic variables */
+  --input-background: var(--background);
+  --input-foreground: var(--foreground);
+  --input-border: var(--border);
+  --input-ring: var(--ring);
+  --input-muted: var(--muted-foreground);
+
+  width: 100%;
+  height: 42px;
+
+  padding: 0 13px;
+
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius);
+
+  background: var(--input-background);
+  color: var(--input-foreground);
+
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+  outline: none;
+
+  box-shadow: inset 0 1px 0
+    color-mix(in srgb, var(--foreground) 5%, transparent);
+
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    background-color 150ms ease;
+}
+
+.lifeinvader-input::placeholder {
+  color: var(--input-muted);
+  opacity: 0.7;
+}
+
+.lifeinvader-input:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--input-border) 70%, var(--foreground));
+}
+
+.lifeinvader-input:focus {
+  border-color: var(--input-ring);
+
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--input-ring) 16%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--foreground) 5%, transparent);
+}
+
+/* Lifeinvader accent */
+.lifeinvader-input:focus-visible {
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--primary) 15%, transparent),
+    0 0 12px color-mix(in srgb, var(--primary) 10%, transparent);
+}
+
+.lifeinvader-input:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.lifeinvader-input[aria-invalid="true"] {
+  border-color: var(--destructive);
+
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--destructive) 12%, transparent);
+}
+
+.lifeinvader-input[aria-invalid="true"]:focus {
+  border-color: var(--destructive);
+
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--destructive) 15%, transparent);
+}
+
+/* Remove browser number controls */
+.lifeinvader-input[type="number"]::-webkit-inner-spin-button,
+.lifeinvader-input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.lifeinvader-input[type="number"] {
+  appearance: textfield;
+}

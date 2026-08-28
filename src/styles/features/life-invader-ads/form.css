@@ -1,0 +1,188 @@
+.li-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.li-field__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  letter-spacing: 0.01em;
+}
+
+.li-field__hint {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  opacity: 0.8;
+}
+
+/* Transaction toggle -------------------------------------------------- */
+
+.li-toggle {
+  display: inline-grid;
+  grid-auto-flow: column;
+  gap: 4px;
+
+  padding: 4px;
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 4px);
+}
+
+.li-toggle__option {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 9px 20px;
+  border: none;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--muted-foreground);
+
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.li-toggle__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.li-toggle__option:hover {
+  color: var(--foreground);
+}
+
+.li-toggle__option.is-active {
+  background: var(--card);
+  color: var(--foreground);
+  box-shadow: var(--shadow-sm);
+}
+
+.li-toggle__option--selling.is-active {
+  color: var(--primary);
+}
+
+.li-toggle__option--buying.is-active {
+  color: var(--chart-4, var(--primary));
+}
+
+/* Checkbox pill --------------------------------------------------------- */
+
+.li-pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.li-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--muted-foreground);
+
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    border-color 150ms ease,
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.li-pill__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.li-pill:hover {
+  border-color: color-mix(in srgb, var(--primary) 40%, var(--border));
+  color: var(--foreground);
+}
+
+.li-pill.is-active {
+  background: color-mix(in srgb, var(--primary) 14%, var(--card));
+  border-color: var(--primary);
+  color: var(--foreground);
+}
+
+.li-pill.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Output box -------------------------------------------------------------- */
+
+.li-output {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 16px;
+  background: var(--muted);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+}
+
+.li-output__text {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.li-output__copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Form layout ----------------------------------------------------------- */
+
+.li-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.li-form__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.li-form__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}

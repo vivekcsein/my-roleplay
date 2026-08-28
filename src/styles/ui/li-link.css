@@ -1,0 +1,74 @@
+.lifeinvader-link {
+  --link-color: var(--primary);
+  --link-hover: var(--primary);
+  --link-foreground: var(--foreground);
+
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
+  color: var(--link-color);
+
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+
+  text-decoration: none;
+
+  transition:
+    color 150ms ease,
+    opacity 150ms ease;
+}
+
+.lifeinvader-link::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  left: 0;
+
+  height: 1px;
+
+  background: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: right;
+
+  transition: transform 180ms ease;
+}
+
+.lifeinvader-link:hover {
+  color: var(--link-hover);
+}
+
+.lifeinvader-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.lifeinvader-link:active {
+  opacity: 0.75;
+}
+
+.lifeinvader-link:focus-visible {
+  border-radius: 3px;
+
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+.lifeinvader-link[aria-current="page"] {
+  color: var(--link-color);
+  font-weight: 700;
+}
+
+.lifeinvader-link[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}

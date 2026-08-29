@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/features/blogs/blogs.css";
 import { notFound } from "next/navigation";
+import AdsServices from "@/components/features/ads-sense/AdsServices";
 import BlogContent from "@/components/features/blogs/BlogContent";
 import BlogPostHero from "@/components/features/blogs/BlogPostHero";
 import Markdown from "@/components/ui/markdown/Markdown";
@@ -54,23 +55,25 @@ const BlogPostPage = async ({ params }: PageProps<"/blogs/[slug]">) => {
     <article>
       <BlogPostHero normalized={normalized} />
 
-      <div className="li-blog-post">
-        {item.source === "post" ? (
-          <BlogContent blocks={item.post.content} />
-        ) : (
-          <Markdown content={item.markdown} />
-        )}
+      <AdsServices>
+        <div className="li-blog-post">
+          {item.source === "post" ? (
+            <BlogContent blocks={item.post.content} />
+          ) : (
+            <Markdown content={item.markdown} />
+          )}
 
-        {normalized.tags.length > 0 ? (
-          <footer className="li-blog-post__tags">
-            {normalized.tags.map((tag) => (
-              <span key={tag} className="li-blog-post__tag">
-                #{tag.replace(/\s+/g, "-")}
-              </span>
-            ))}
-          </footer>
-        ) : null}
-      </div>
+          {normalized.tags.length > 0 ? (
+            <footer className="li-blog-post__tags">
+              {normalized.tags.map((tag) => (
+                <span key={tag} className="li-blog-post__tag">
+                  #{tag.replace(/\s+/g, "-")}
+                </span>
+              ))}
+            </footer>
+          ) : null}
+        </div>
+      </AdsServices>
     </article>
   );
 };

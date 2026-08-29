@@ -1,22 +1,69 @@
 import type { StaticImageData } from "next/image";
-import howToMakeMoneyBanner from "@/assets/images/gta5/how-to-make-money-banner.jpg";
-import roleplayGuideBanner from "@/assets/images/gta5/roleplay-guide-banner.jpg";
+
+// GTA 5 images
+import gta5RoleplayGuide from "@/assets/images/gta5/gta5-roleplay-guide.jpg";
+// GTA 6 images
 import gta6ExtendedLookCover from "@/assets/images/gta6/gta6-extended-look-cover.jpg";
-import LiAdsPolicyBanner from "@/assets/images/lifeinvader/li-ads-policy-banner.jpg";
-/** Small pool of themed stock photos used when a post/doc doesn't supply its
- * own `coverImage`/`images`. Picked deterministically per-slug (same doc
- * always gets the same fallback) rather than randomly, so the choice is
- * stable across builds and doesn't shuffle on every deploy. */
+// LifeInvader images
+import lifeinvaderAdsPolicy from "@/assets/images/lifeinvader/lifeinvader-ads-policy.jpg";
+// Roleplay images
+import roleplayBasicTerms from "@/assets/images/roleplay/roleplay-basic-terms.jpg";
+import roleplayFairplayRules from "@/assets/images/roleplay/roleplay-fairplay-rules.jpg";
+import roleplayGeneralRules from "@/assets/images/roleplay/roleplay-general-rules.jpg";
+import roleplayHowToMakeMoney from "@/assets/images/roleplay/roleplay-how-to-make-money.jpg";
+
+/**
+ * Single place to register every locally-bundled image used across blogs,
+ * docs, and page banners. As the image count grows, add the import above
+ * and one line below — nothing else in the app should ever hardcode an
+ * image path or URL directly (see `get-image.ts`'s `getImageSrc`, which is
+ * the only thing that should read this registry).
+ *
+ * Key convention: the filename as it appears in `coverImage`/`images`
+ * fields in content configs (`blogs.config.ts`, `docs.config.ts`, etc.),
+ * e.g. `coverImage: "gta6-extended-look-cover.jpg"`.
+ */
+export const imageRegistry = {
+  // GTA 5 images
+  "roleplay-gta5-guide.jpg": gta5RoleplayGuide,
+
+  // GTA 6 images
+  "gta6-extended-look-cover.jpg": gta6ExtendedLookCover,
+
+  // LifeInvader images
+  "lifeinvader-ads-policy.jpg": lifeinvaderAdsPolicy,
+
+  // Roleplay images
+  "roleplay-basic-terms.jpg": roleplayBasicTerms,
+  "roleplay-fairplay-rules.jpg": roleplayFairplayRules,
+  "roleplay-general-rules.jpg": roleplayGeneralRules,
+  "roleplay-how-to-make-money.jpg": roleplayHowToMakeMoney,
+} satisfies Record<string, StaticImageData>;
+
+/** Autocomplete-friendly union of every registered local image key. */
+export type RegisteredImageKey = keyof typeof imageRegistry;
+
+/**
+ * Small pool of themed stock photos used when a post/doc doesn't supply its
+ * own `coverImage`. Picked deterministically per-slug in
+ * `content-normalize.ts` (same doc always gets the same fallback) rather
+ * than randomly, so the choice is stable across builds and doesn't shuffle
+ * on every deploy.
+ */
 export const FALLBACK_COVER_IMAGES = [
   "https://images.unsplash.com/photo-1686678951896-b991cf404912?auto=format&fit=crop&w=1600&q=80",
   "https://images.unsplash.com/photo-1746653776326-282757d666c1?auto=format&fit=crop&w=1600&q=80",
   "https://images.unsplash.com/photo-1698812004183-2c13601de23e?auto=format&fit=crop&w=1600&q=80",
   "https://images.unsplash.com/photo-1715733965672-5c6a4c450f1e?auto=format&fit=crop&w=1600&q=80",
-];
+] as const;
 
-export const imageRegistry: Record<string, StaticImageData> = {
-  "gta6-extended-look-cover.jpg": gta6ExtendedLookCover,
-  "roleplay-guide-banner.jpg": roleplayGuideBanner,
-  "li-ads-policy-banner.jpg": LiAdsPolicyBanner,
-  "how-to-make-money-banner.jpg": howToMakeMoneyBanner,
-};
+/**
+ * One-off page/section banners that aren't tied to a specific post or doc
+ * (so they don't belong in `imageRegistry`'s per-content lookup, and aren't
+ * a fallback pool either). Add new page banners here by name instead of
+ * inlining a URL/import in the component that renders them.
+ */
+export const PAGE_BANNER_IMAGES = {
+  blogsIndexMasthead:
+    "https://images.unsplash.com/photo-1746653776326-282757d666c1?auto=format&fit=crop&w=1920&q=80",
+} as const;

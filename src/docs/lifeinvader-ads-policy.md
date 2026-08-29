@@ -135,7 +135,6 @@ These get rejected, but do not trigger a blacklist:
   - Gang HQs
   - Black Market
   - Party at LifeInvader (except LI Galaxy Rooftop), LSPD, FIB, SAHP, EMS, Government, National Guard (NG) base or FZ, Capitol, Aircraft Carrier, Power Plant, Farm, ghetto, or any business, beach market
-- Grand coins
 - Battle Pass
 - Weapons case / container
 - Defense case / container

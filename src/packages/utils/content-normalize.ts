@@ -1,3 +1,4 @@
+import type { StaticImageData } from "next/image";
 import type { DocEntry } from "@/packages/utils/get-docs";
 import type { BlogContentBlock, BlogPost } from "@/types/blog";
 import { FALLBACK_COVER_IMAGES } from "../configs/images.config";
@@ -24,8 +25,12 @@ export type NormalizedContentItem = {
   readTimeMinutes: number;
   source: "post" | "doc";
   /** Banner image for the card grid and the post masthead. Always populated —
-   * either the source's own image or a deterministic themed fallback. */
-  coverImage: string;
+   * either the source's own registered/external image or a deterministic
+   * themed fallback. `StaticImageData` for locally-registered images (see
+   * `images.config.ts`), a plain URL string for external/fallback ones —
+   * `next/image`'s `src` prop accepts both natively, so callers never need
+   * to know or care which one they got. */
+  coverImage: string | StaticImageData;
 };
 
 /** ~200 words/minute, rounded up, minimum 1 minute. */
@@ -137,8 +142,8 @@ export const normalizeBlogPost = (post: BlogPost): NormalizedContentItem => {
     readTimeMinutes: estimateReadTimeFromWordCount(wordCount),
     source: "post",
     coverImage: post.coverImage
-      ? (getImageSrc(post.coverImage) as string)
-      : (pickFallbackCoverImage(post.slug) as string),
+      ? (getImageSrc(post.coverImage) ?? pickFallbackCoverImage(post.slug))
+      : pickFallbackCoverImage(post.slug),
   };
 };
 
@@ -163,8 +168,8 @@ export const normalizeDoc = (
     readTimeMinutes: estimateReadTimeFromWordCount(wordCount),
     source: "doc",
     coverImage: doc.coverImage
-      ? (getImageSrc(doc.coverImage) as string)
-      : (pickFallbackCoverImage(doc.slug) as string),
+      ? (getImageSrc(doc.coverImage) ?? pickFallbackCoverImage(doc.slug))
+      : pickFallbackCoverImage(doc.slug),
   };
 };
 

@@ -26,7 +26,7 @@ export const getImageSrc = (
   }
 
   // Local registered image
-  return imageRegistry[src] ?? src;
+  return (imageRegistry as Record<string, StaticImageData>)[src] ?? src;
 };
 
 /* =========================================================

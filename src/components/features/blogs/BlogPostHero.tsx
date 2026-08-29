@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useGsapBlogAnimation } from "@/packages/hooks/gsap/useGsapBlogAnimation";
+import { useGsapParallax } from "@/packages/hooks/gsap/useGsapParallax";
 import {
   formatContentDate,
   type NormalizedContentItem,
@@ -13,18 +14,21 @@ interface BlogPostHeroProps {
 
 const BlogPostHero = ({ normalized }: BlogPostHeroProps) => {
   const { containerRef } = useGsapBlogAnimation();
+  const { imageRef } = useGsapParallax(containerRef);
 
   return (
     <section ref={containerRef} className="li-post-hero">
       <div className="li-post-hero__image-wrapper">
-        <Image
-          src={normalized.coverImage}
-          alt={normalized.title}
-          fill
-          sizes="100vw"
-          priority
-          className="li-post-hero__image"
-        />
+        <div ref={imageRef} className="li-post-hero__image-drift">
+          <Image
+            src={normalized.coverImage}
+            alt={normalized.title}
+            fill
+            sizes="100vw"
+            priority
+            className="li-post-hero__image"
+          />
+        </div>
       </div>
       <div className="li-post-hero__overlay" />
 

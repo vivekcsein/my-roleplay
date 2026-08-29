@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { BlogContentBlock } from "@/types/blog";
 
 interface BlogContentProps {
@@ -25,6 +26,27 @@ const BlogContent = ({ blocks }: BlogContentProps) => {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+          );
+        }
+
+        if (block.type === "image") {
+          return (
+            <figure key={key} className="li-blog-content__figure">
+              <div className="li-blog-content__image-wrapper">
+                <Image
+                  src={block.src}
+                  alt={block.alt}
+                  fill
+                  sizes="(min-width: 768px) 720px, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              {block.caption && (
+                <figcaption className="li-blog-content__caption">
+                  {block.caption}
+                </figcaption>
+              )}
+            </figure>
           );
         }
 

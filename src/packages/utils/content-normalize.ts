@@ -51,6 +51,7 @@ export const normalizeBlogPost = (post: BlogPost): NormalizedContentItem => {
   const wordCount = post.content.reduce((total, block) => {
     if (block.type === "list")
       return total + block.items.join(" ").split(/\s+/).length;
+    if (block.type === "image") return total;
     return total + block.text.split(/\s+/).length;
   }, 0);
 

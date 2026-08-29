@@ -13,11 +13,13 @@ export const getAllBlogSlugs = (): string[] => posts.map((post) => post.slug);
 export const getBlogPostBySlug = (slug: string): BlogPost | null =>
   posts.find((post) => post.slug === slug) ?? null;
 
-/** ~200 words/minute, rounded up, minimum 1 minute. */
+/** ~200 words/minute, rounded up, minimum 1 minute. Image blocks don't
+ * contribute word count. */
 export const estimateReadTimeMinutes = (post: BlogPost): number => {
   const wordCount = post.content.reduce((total, block) => {
     if (block.type === "list")
       return total + block.items.join(" ").split(/\s+/).length;
+    if (block.type === "image") return total;
     return total + block.text.split(/\s+/).length;
   }, 0);
   return Math.max(1, Math.ceil(wordCount / 200));

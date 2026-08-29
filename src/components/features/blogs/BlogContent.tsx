@@ -52,7 +52,7 @@ const BlogContent = ({ blocks }: BlogContentProps) => {
 
         return (
           <p key={key} className="li-blog-content__paragraph">
-            {block.text}
+            {block.type === "paragraph" ? block.text : ""}
           </p>
         );
       })}

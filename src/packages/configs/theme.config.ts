@@ -16,6 +16,12 @@ export const THEME_STORAGE_KEY = "theme";
 
 export const themeConfig = {
   storageKey: THEME_STORAGE_KEY,
-  defaultTheme: "system",
-  enableSystem: true,
+  defaultTheme: "dark",
+  enableSystem: false,
+  /** No theme toggle exists anywhere in the UI — the site is dark-only by
+   * design. Forcing it here (rather than just setting a default) means
+   * next-themes never reads localStorage/system preference and never has
+   * a reason to switch away from dark, which is what was silently
+   * fighting the old forced-dark inline script in apply-theme.ts. */
+  forcedTheme: "dark",
 } as const;

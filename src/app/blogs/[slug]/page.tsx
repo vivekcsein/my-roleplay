@@ -1,24 +1,18 @@
 import type { Metadata } from "next";
+import "@/styles/features/blogs/blogs.css";
 import { notFound } from "next/navigation";
 import BlogContent from "@/components/features/blogs/BlogContent";
+import BlogPostHero from "@/components/features/blogs/BlogPostHero";
 import Markdown from "@/components/ui/markdown/Markdown";
 import { getAllContent, getContentBySlug } from "@/packages/utils/content-hub";
-import { formatContentDate } from "@/packages/utils/content-normalize";
-import "@/styles/features/blogs/blogs.css";
 
 export function generateStaticParams() {
   return getAllContent().map(({ slug }) => ({ slug }));
 }
 
-interface BlogPostPageProps {
-  params: {
-    slug: string;
-  };
-}
-
 export async function generateMetadata({
   params,
-}: BlogPostPageProps): Promise<Metadata> {
+}: PageProps<"/blogs/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const item = getContentBySlug(slug);
 
@@ -48,7 +42,7 @@ export async function generateMetadata({
   };
 }
 
-const BlogPostPage = async ({ params }: BlogPostPageProps) => {
+const BlogPostPage = async ({ params }: PageProps<"/blogs/[slug]">) => {
   const { slug } = await params;
   const item = getContentBySlug(slug);
 
@@ -57,34 +51,26 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
   const { normalized } = item;
 
   return (
-    <article className="li-blog-post">
-      <header className="li-blog-post__header">
-        <p className="li-blog-index__eyebrow">{normalized.category}</p>
-        <h1 className="li-blog-post__title">{normalized.title}</h1>
-        <div className="li-blog-card__meta">
-          <span>{normalized.author}</span>
-          <span aria-hidden="true">·</span>
-          <span>{formatContentDate(normalized.publishedAt)}</span>
-          <span aria-hidden="true">·</span>
-          <span>{normalized.readTimeMinutes} min read</span>
-        </div>
-      </header>
+    <article>
+      <BlogPostHero normalized={normalized} />
 
-      {item.source === "post" ? (
-        <BlogContent blocks={item.post.content} />
-      ) : (
-        <Markdown content={item.markdown} />
-      )}
+      <div className="li-blog-post">
+        {item.source === "post" ? (
+          <BlogContent blocks={item.post.content} />
+        ) : (
+          <Markdown content={item.markdown} />
+        )}
 
-      {normalized.tags.length > 0 ? (
-        <footer className="li-blog-post__tags">
-          {normalized.tags.map((tag) => (
-            <span key={tag} className="li-blog-post__tag">
-              #{tag.replace(/\s+/g, "-")}
-            </span>
-          ))}
-        </footer>
-      ) : null}
+        {normalized.tags.length > 0 ? (
+          <footer className="li-blog-post__tags">
+            {normalized.tags.map((tag) => (
+              <span key={tag} className="li-blog-post__tag">
+                #{tag.replace(/\s+/g, "-")}
+              </span>
+            ))}
+          </footer>
+        ) : null}
+      </div>
     </article>
   );
 };

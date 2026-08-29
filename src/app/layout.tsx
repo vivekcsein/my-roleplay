@@ -1,10 +1,8 @@
 import "@/styles/globals.css";
-import Script from "next/script";
 import GoogleAdSenseScript from "@/components/features/ads-sense/google-ads/GoogleAdSenseScript";
 import AppClientLayout from "@/components/layouts/AppClientLayout";
 import StructuredData from "@/components/seo/StructuredData";
 import { baseMetadata } from "@/packages/seo/seo.config";
-import { themeInitScript } from "@/packages/utils/apply-theme";
 
 export const metadata = baseMetadata;
 
@@ -16,11 +14,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`h-full antialiased`}
     >
       <head>
-        {/* Runs before hydration so the correct .dark class is applied
-            before first paint — prevents a flash of the wrong theme. */}
-        <Script id="theme-init" strategy="beforeInteractive">
-          {themeInitScript}
-        </Script>
+        {/* No-flash dark enforcement is handled by next-themes' own
+            forcedTheme script (see ThemeProvider) — the site has no theme
+            toggle, so forcing it there is sufficient and avoids running two
+            competing theme scripts that raced each other on first paint. */}
         <StructuredData />
         <GoogleAdSenseScript />
       </head>

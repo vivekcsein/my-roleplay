@@ -1,5 +1,7 @@
 import type { DocEntry } from "@/packages/utils/get-docs";
-import type { BlogPost } from "@/types/blog";
+import type { BlogContentBlock, BlogPost } from "@/types/blog";
+import { FALLBACK_COVER_IMAGES } from "../configs/images.config";
+import { getImageSrc } from "./get-image";
 
 /**
  * Shared shape the `/blogs` index and card list render, regardless of
@@ -21,11 +23,22 @@ export type NormalizedContentItem = {
   publishedAt: string;
   readTimeMinutes: number;
   source: "post" | "doc";
+  /** Banner image for the card grid and the post masthead. Always populated —
+   * either the source's own image or a deterministic themed fallback. */
+  coverImage: string;
 };
 
 /** ~200 words/minute, rounded up, minimum 1 minute. */
 const estimateReadTimeFromWordCount = (wordCount: number): number =>
   Math.max(1, Math.ceil(wordCount / 200));
+
+const pickFallbackCoverImage = (slug: string): string => {
+  let hash = 0;
+  for (let i = 0; i < slug.length; i++) {
+    hash = (hash * 31 + slug.charCodeAt(i)) >>> 0;
+  }
+  return FALLBACK_COVER_IMAGES[hash % FALLBACK_COVER_IMAGES.length];
+};
 
 export const formatContentDate = (isoDate: string): string => {
   const date = new Date(isoDate);
@@ -47,24 +60,85 @@ const parseDocDate = (ddmmyyyy: string): string => {
   return new Date(Date.UTC(year, month - 1, day)).toISOString();
 };
 
+const countWords = (text: string): number => {
+  return text.trim().split(/\s+/).filter(Boolean).length;
+};
+
+const countWordsFromBlock = (block: BlogContentBlock): number => {
+  switch (block.type) {
+    case "paragraph":
+    case "heading":
+    case "quote":
+    case "callout":
+    case "link":
+    case "button":
+      return countWords("text" in block ? block.text : "");
+
+    case "code":
+      return countWords(block.code);
+
+    case "list":
+      return countWords(block.items.join(" "));
+
+    case "image":
+      return 0;
+
+    case "gallery":
+      return countWords(
+        block.images
+          .map((image) => `${image.alt} ${image.caption ?? ""}`)
+          .join(" "),
+      );
+
+    case "table":
+      return countWords([...block.headers, ...block.rows.flat()].join(" "));
+
+    case "embed":
+      return countWords(block.title ?? "");
+
+    case "video":
+    case "youtube":
+    case "tweet":
+    case "github":
+    case "file":
+    case "divider":
+      return 0;
+
+    case "accordion":
+      return block.content.reduce(
+        (total, child) => total + countWordsFromBlock(child),
+        0,
+      );
+
+    case "columns":
+      return block.columns
+        .flat()
+        .reduce((total, child) => total + countWordsFromBlock(child), 0);
+
+    default:
+      return 0;
+  }
+};
+
 export const normalizeBlogPost = (post: BlogPost): NormalizedContentItem => {
-  const wordCount = post.content.reduce((total, block) => {
-    if (block.type === "list")
-      return total + block.items.join(" ").split(/\s+/).length;
-    if (block.type === "image") return total;
-    return total + block.text.split(/\s+/).length;
-  }, 0);
+  const wordCount = post.content.reduce(
+    (total, block) => total + countWordsFromBlock(block),
+    0,
+  );
 
   return {
     slug: post.slug,
     title: post.title,
-    excerpt: post.excerpt,
+    excerpt: post.description,
     category: post.category,
     tags: post.tags,
     author: post.author,
     publishedAt: post.publishedAt,
     readTimeMinutes: estimateReadTimeFromWordCount(wordCount),
     source: "post",
+    coverImage: post.coverImage
+      ? (getImageSrc(post.coverImage) as string)
+      : (pickFallbackCoverImage(post.slug) as string),
   };
 };
 
@@ -88,6 +162,9 @@ export const normalizeDoc = (
     publishedAt: parseDocDate(doc.createdAt),
     readTimeMinutes: estimateReadTimeFromWordCount(wordCount),
     source: "doc",
+    coverImage: doc.coverImage
+      ? (getImageSrc(doc.coverImage) as string)
+      : (pickFallbackCoverImage(doc.slug) as string),
   };
 };
 

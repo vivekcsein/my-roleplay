@@ -1,6 +1,6 @@
 # LifeInvader — Ads & Policy Reference Guide
 
-_Internal Policy last edited 21st August 2026 by Zen Spellman (originally created by Sully Ra'Nell, August 2022). Grammar & Format Guide compiled alongside it. This document merges both into one long-form reference for editing and posting ads on LifeInvader._
+_Internal Policy last edited 21st August 2026. Grammar & Format Guide compiled alongside it. This document merges both into one long-form reference for editing and posting ads on LifeInvader._
 
 ---
 

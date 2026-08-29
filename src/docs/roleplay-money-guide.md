@@ -2,7 +2,7 @@
 
 This guide covers **every legal and illegal way** to make money in-game, organized into **income tiers** so you know what to expect at each stage of your character's journey. 🎮
 
-⚠️ **Reminder:** Illegal activities still follow the [Fair Play Rules](./Safety-Fair-Play-Rules.md) — no PowerGaming, no UB, and always roleplay realistically. Getting caught is part of the risk!
+⚠️ **Reminder:** Illegal activities still follow the [Fair Play Rules](./roleplay-fairplay-rules) — no PowerGaming, no UB, and always roleplay realistically. Getting caught is part of the risk!
 
 ---
 
@@ -44,7 +44,7 @@ This is where every new character starts. Slow, steady, low-risk money.
 
 Once you're established, you can specialize and start earning steadier weekly income.
 
-### 👔 Skilled Jobs
+### 👔 Mid Level Skilled Jobs
 
 - 🚓 Police Officer / EMS / Fire Dept — steady government paycheck + bonuses
 - 🔧 Licensed Mechanic — full vehicle repair/tuning shop work
@@ -107,7 +107,7 @@ This tier is dominated by **illegal activity**, gang operations, and big busines
 
 ### 🏢 Big Business & Ownership
 
-- 🏢 Owning a Business (your **1 allowed business** — GR1.5) — shop, dealership, nightclub, etc.
+- 🏢 Owning a Business (your **1 allowed business** — Rule 1.5) — shop, dealership, nightclub, etc.
 - 🏘️ Property Investment & Flipping — buying/selling houses for profit
 - 📈 Running a large legal company with employees under you
 - 🚗 Vehicle Dealership Ownership
@@ -136,7 +136,7 @@ This tier is dominated by **illegal activity**, gang operations, and big busines
 
 1. 🐣 **Start legal.** Build capital safely before risking illegal RP.
 2. 👥 **Join a family or gang** — shared activities + leader bonuses multiply your income.
-3. 🏢 **Save for one solid business** — remember, only 1 business per player (GR1.5).
+3. 🏢 **Save for one solid business** — remember, only 1 business per player (Rule 1.5).
 4. ⚖️ **Balance risk.** Illegal money is fast but comes with jail, gear loss, and rival conflict.
 5. 🚫 **Never break economy rules** chasing money — RMT and tax evasion get you **permanently banned**, wiping out everything you earned.
 

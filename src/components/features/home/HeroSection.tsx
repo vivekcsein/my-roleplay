@@ -11,10 +11,46 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import Image from "next/image";
+import HeroCta from "./HeroCta";
 
 interface HeroProps {
   config: HeroConfig;
 }
+
+/** Normalizes `slide.imageUrl` (string or per-breakpoint object) into the
+ * up-to-3 sources we render, each gated behind a Tailwind breakpoint class
+ * so the browser only downloads/paints the one matching its viewport. */
+const resolveHeroImages = (
+  imageUrl: NonNullable<HeroConfig["slides"][number]["imageUrl"]>,
+) => {
+  if (typeof imageUrl === "string") {
+    return [{ src: imageUrl, wrapperClassName: "block" }];
+  }
+
+  const { mobile, tablet, desktop } = imageUrl;
+  const images: { src: string; wrapperClassName: string }[] = [];
+
+  if (mobile) {
+    images.push({
+      src: mobile,
+      wrapperClassName: tablet ? "block md:hidden" : "block lg:hidden",
+    });
+  }
+  if (tablet) {
+    images.push({
+      src: tablet,
+      wrapperClassName: mobile
+        ? "hidden md:block lg:hidden"
+        : "block lg:hidden",
+    });
+  }
+  images.push({
+    src: desktop,
+    wrapperClassName: mobile || tablet ? "hidden lg:block" : "block",
+  });
+
+  return images;
+};
 
 export const HeroSection: React.FC<HeroProps> = ({ config }) => {
   const {
@@ -44,28 +80,36 @@ export const HeroSection: React.FC<HeroProps> = ({ config }) => {
         onSlideChange={handleSlideChange}
         className="w-full h-[85vh] min-h-137.5 max-h-225"
       >
-        {slides.map((slide) => (
+        {slides.map((slide, index) => (
           <SwiperSlide key={slide.id} className="relative w-full h-full">
             <div data-animate="true" className="relative w-full h-full">
               {slide.imageUrl && (
                 <div className="absolute inset-0 z-0">
-                  <Image
-                    src={slide.imageUrl}
-                    alt={slide.title}
-                    className="w-full h-full object-cover object-center"
-                    width={1920}
-                    height={1080}
-                  />
+                  {resolveHeroImages(slide.imageUrl).map((image) => (
+                    <div
+                      key={image.src}
+                      className={`absolute inset-0 ${image.wrapperClassName}`}
+                    >
+                      <Image
+                        src={image.src}
+                        alt={slide.title}
+                        fill
+                        sizes="100vw"
+                        priority={index === 0}
+                        className="object-cover object-center"
+                      />
+                    </div>
+                  ))}
                   <div className="absolute inset-0 bg-linear-to-t from-background via-background/60 to-transparent" />
                   <div className="absolute inset-0 bg-background/40" />
                 </div>
               )}
 
-              <div className="relative z-10 container mx-auto h-full px-4 sm:px-6 lg:px-8 flex flex-col justify-end pb-16 md:pb-24">
+              <div className="relative z-10 container mx-auto h-full px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center pb-16 md:pb-24">
                 {slide.customContent ? (
                   <div className="gsap-animate">{slide.customContent}</div>
                 ) : (
-                  <div className="max-w-3xl space-y-4 md:space-y-6">
+                  <div className="max-w-3xl mx-auto flex flex-col items-center space-y-4 md:space-y-6">
                     {slide.badge && (
                       <div className="gsap-animate inline-flex items-center rounded-full border border-border bg-secondary/80 px-3 py-1 text-xs md:text-sm font-semibold text-secondary-foreground backdrop-blur-md">
                         {slide.badge}
@@ -80,22 +124,10 @@ export const HeroSection: React.FC<HeroProps> = ({ config }) => {
                       {slide.description}
                     </p>
 
-                    <div className="gsap-animate flex flex-wrap gap-4 pt-2">
-                      {slide.primaryCta && (
-                        <a
-                          href={slide.primaryCta.href}
-                          className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm md:text-base font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                        >
-                          {slide.primaryCta.text}
-                        </a>
-                      )}
+                    <div className="gsap-animate flex flex-wrap justify-center gap-4 pt-2">
+                      {slide.primaryCta && <HeroCta cta={slide.primaryCta} />}
                       {slide.secondaryCta && (
-                        <a
-                          href={slide.secondaryCta.href}
-                          className="inline-flex items-center justify-center rounded-md border border-input bg-background/50 backdrop-blur-md px-6 py-3 text-sm md:text-base font-medium text-foreground shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                        >
-                          {slide.secondaryCta.text}
-                        </a>
+                        <HeroCta cta={slide.secondaryCta} />
                       )}
                     </div>
                   </div>

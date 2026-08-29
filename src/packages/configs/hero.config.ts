@@ -7,7 +7,14 @@ export interface HeroSlide {
   description: string;
   primaryCta?: { text: string; href: string };
   secondaryCta?: { text: string; href: string };
-  imageUrl?: string;
+  /**
+   * Background image. Either a single URL used at every screen size, or a
+   * per-breakpoint object so you can art-direct a tighter crop for mobile
+   * instead of relying on `object-cover` to crop a wide desktop image.
+   * `desktop` is required as the fallback source; `mobile`/`tablet` are
+   * optional overrides swapped in via CSS breakpoints (no JS/layout shift).
+   */
+  imageUrl?: string | { mobile?: string; tablet?: string; desktop: string };
   customContent?: React.ReactNode;
 }
 
@@ -32,36 +39,58 @@ export const heroConfigData: HeroConfig = {
   className: "h-[90vh] min-h-[600px]",
   slides: [
     {
-      id: "eldoria-review",
-      badge: "Featured Content",
-      title: "ELDORIA ARRIVES! | Comprehensive Review & New Beginner's Guide",
+      id: "gta-6-extended-look",
+      badge: "GTA 6 Reveal",
+      title:
+        "GTA 6 Extended Look: 26 Minutes of Vice City & Dynamic Character Switching",
       description:
-        "Discover the world of Eldoria, available today. Read our detailed breakdown of core gameplay mechanics, beginner strategies, and world lore.",
-      primaryCta: { text: "Read Review", href: "/reviews/eldoria" },
-      secondaryCta: { text: "Watch Trailer", href: "/media/eldoria-trailer" },
+        "Rockstar drops an extensive gameplay showcase featuring Jason and Lucia. Explore dynamic NPC interactions, expanded Leonida mapping, and seamless crime mechanics.",
+      primaryCta: {
+        text: "Watch Showcase",
+        href: "https://youtu.be/tJbzMqJGH4k",
+      },
+      secondaryCta: {
+        text: "Breakdown & Lore",
+        href: "https://youtu.be/toQkKWEs2iE",
+      },
       imageUrl:
-        "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1920&q=80",
+        "https://cdna.artstation.com/p/assets/images/images/083/606/350/large/nishal-basheer-sketch1736346215942.jpg?1736358261",
     },
     {
-      id: "esports-arena-live",
-      badge: "Pro League Finals Live",
-      title: "Global Esports Arena: Match Analysis, Standings & Results",
+      id: "grand-rp-migration-2026",
+      badge: "Grand RP News",
+      title:
+        "Grand Role Play Major Expansion: Shifting to FiveM, Serbian Server Already migrated",
       description:
-        "Watch the intense final battles unfold live in the championship arena. Track your favorite teams and real-time tournament standings.",
-      primaryCta: { text: "Watch Now", href: "/live/esports-finals" },
-      secondaryCta: { text: "View Standings", href: "/esports/standings" },
+        "Grand RP is shifting to FiveM, and the Serbian server has already been migrated. Check out the new features and get ready to play like a five-year veteran!",
+      primaryCta: {
+        text: "View Grand RP Guide",
+        href: "/blogs/grand-rp-update-aug-2026",
+      },
+      secondaryCta: {
+        text: "Visit Serbian Server",
+        href: "https://gta5grand.com/",
+      },
       imageUrl:
         "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1920&q=80",
     },
     {
-      id: "mw3-loadouts",
-      badge: "Meta Strategy",
-      title: "Top Loadouts & Class Setups for Competitive Domination",
+      id: "fivem-enhanced-launch",
+      badge: "FiveM Platform Update",
+      title:
+        "FiveM Enhanced Early Access: Next-Gen Graphics & 120 Tick Servers",
       description:
-        "Dominating MW3: The Best Class Setups. Master the current competitive meta with our expert attachment breakdowns and weapon perks.",
-      primaryCta: { text: "Get The Guide", href: "/guides/mw3-loadouts" },
+        "Rockstar's official FiveM team launches support for GTA V Enhanced. Experience higher tick rates, overhauled network sync, and GTA VI-rivaling visual upgrades on supported RP servers.",
+      primaryCta: {
+        text: "Read RP Update",
+        href: "/news/fivem-enhanced-launch",
+      },
+      secondaryCta: {
+        text: "Server Patch Notes",
+        href: "/guides/fivem-enhanced-setup",
+      },
       imageUrl:
-        "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=1920&q=80",
+        "https://c4.wallpaperflare.com/wallpaper/821/1/187/core-roleplay-grand-theft-auto-grand-theft-auto-v-roleplaying-fivem-hd-wallpaper-preview.jpg",
     },
   ],
 };

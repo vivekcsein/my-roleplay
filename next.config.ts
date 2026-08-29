@@ -8,6 +8,8 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "**.githubusercontent.com" },
       { protocol: "https", hostname: "i.ibb.co" },
       { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "c4.wallpaperflare.com" },
+      { protocol: "https", hostname: "cdna.artstation.com" },
     ],
     unoptimized: true,
   },

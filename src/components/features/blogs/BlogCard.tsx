@@ -1,12 +1,9 @@
 import Link from "next/link";
-import {
-  estimateReadTimeMinutes,
-  formatPublishedDate,
-} from "@/packages/content/blogs";
-import type { BlogPost } from "@/types/blog";
+import type { NormalizedContentItem } from "@/packages/utils/content-normalize";
+import { formatContentDate } from "@/packages/utils/content-normalize";
 
 interface BlogCardProps {
-  post: BlogPost;
+  post: NormalizedContentItem;
 }
 
 const BlogCard = ({ post }: BlogCardProps) => {
@@ -18,9 +15,9 @@ const BlogCard = ({ post }: BlogCardProps) => {
       <div className="li-blog-card__meta">
         <span>{post.author}</span>
         <span aria-hidden="true">·</span>
-        <span>{formatPublishedDate(post.publishedAt)}</span>
+        <span>{formatContentDate(post.publishedAt)}</span>
         <span aria-hidden="true">·</span>
-        <span>{estimateReadTimeMinutes(post)} min read</span>
+        <span>{post.readTimeMinutes} min read</span>
       </div>
     </Link>
   );

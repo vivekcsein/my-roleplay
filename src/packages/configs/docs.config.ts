@@ -83,15 +83,15 @@ export const docsConfig = {
       ],
     },
     {
-      key: "roleplay-fairplay-guide",
-      title: "Fairplay Guide",
+      key: "roleplay-fairplay-rules",
+      title: "Fairplay Rules",
       description:
         "A comprehensive guide to Fairplay, the roleplaying system used by the Grand Theft Auto Online community.",
-      slug: "roleplay-fairplay-guide",
-      docPath: "roleplay-fairplay/roleplay-fairplay-guide",
-      file: getFilePath(`${path}/roleplay-fairplay-guide.md`),
-      createdAt: "22/08/2026",
-      updatedAt: "22/08/2026",
+      slug: "roleplay-fairplay-rules",
+      docPath: "roleplay-fairplay/roleplay-fairplay-rules",
+      file: getFilePath(`${path}/roleplay-fairplay-rules.md`),
+      createdAt: "18/08/2024",
+      updatedAt: "22/08/2025",
       keywords: [
         "roleplay",
         "fairplay",

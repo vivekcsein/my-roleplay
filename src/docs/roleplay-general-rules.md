@@ -171,14 +171,17 @@ Each rule has:
 
 🔹 Your in-game name must look like a **real, realistic human name**. No celebrity names, no meme names.
 
+🔹 Nazism & Dictators in Names will be blacklisted.
+
 ⚠️ Not Allowed:
 
 - KillerBoy_69, Noob Gamer, GTA Gamer Pro
 - Michael Jackson, Elon Musk, Cristiano Ronaldo, or any admin's name
+- Hitler, Stalin, etc names will be blacklisted instant.
 
 ✅ Good Examples:
 
-- David Tank, John Pluxury, Prem Mafia, Tenry Hennyson
+- Jonny Bravo, John Pluxury, Jack Ripper or any other name that looks like a real person
 
 > ☠️ **DANGER ZONE: 10 Minutes Jail + Forced Nickname Change**
 

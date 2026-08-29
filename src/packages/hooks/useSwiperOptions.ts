@@ -17,6 +17,7 @@ export const useSwiperOptions = (config: HeroConfig): SwiperOptions => {
       modules: [Navigation, Pagination, Autoplay, EffectFade],
       effect,
       speed: 800,
+      loop: true,
       autoplay: autoplay
         ? { delay: autoplayDelay, disableOnInteraction: false }
         : false,

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import BlogCard from "@/components/features/blogs/BlogCard";
-import { getAllBlogPosts } from "@/packages/content/blogs";
+import { getAllContent } from "@/packages/utils/content-hub";
 import "@/styles/features/blogs/blogs.css";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const BlogsIndexPage = () => {
-  const posts = getAllBlogPosts();
+  const posts = getAllContent();
 
   return (
     <div className="li-blog-index">

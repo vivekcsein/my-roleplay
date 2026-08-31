@@ -50,6 +50,7 @@ export type ContentDetail =
  * that to `notFound()`. */
 export const getContentBySlug = (slug: string): ContentDetail | null => {
   const post = getBlogPostBySlug(slug);
+
   if (post) {
     return { source: "post", normalized: normalizeBlogPost(post), post };
   }

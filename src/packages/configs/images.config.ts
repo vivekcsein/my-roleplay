@@ -4,8 +4,17 @@ import type { StaticImageData } from "next/image";
 import gta5RoleplayGuide from "@/assets/images/gta5/gta5-roleplay-guide.jpg";
 // GTA 6 images
 import gta6ExtendedLookCover from "@/assets/images/gta6/gta6-extended-look-cover.jpg";
+import gta6ExtendedLook01 from "@/assets/images/gta6/gta6-extened-look-01.jpg";
+import gta6ExtendedLook02 from "@/assets/images/gta6/gta6-extened-look-02.jpg";
+import gta6ExtendedLook03 from "@/assets/images/gta6/gta6-extened-look-03.jpg";
+import gta6ExtendedLook04 from "@/assets/images/gta6/gta6-extened-look-04.jpg";
+
 // LifeInvader images
 import lifeinvaderAdsPolicy from "@/assets/images/lifeinvader/lifeinvader-ads-policy.jpg";
+// family images
+import family7RankSystem from "@/assets/images/roleplay/family-7-ranking-system.jpg";
+import family10RankSystem from "@/assets/images/roleplay/family-10-ranking-system.jpg";
+import familyEventsSystem from "@/assets/images/roleplay/family-events-system.jpg";
 // Roleplay images
 import roleplayBasicTerms from "@/assets/images/roleplay/roleplay-basic-terms.jpg";
 import roleplayFairplayRules from "@/assets/images/roleplay/roleplay-fairplay-rules.jpg";
@@ -29,6 +38,10 @@ export const imageRegistry = {
 
   // GTA 6 images
   "gta6-extended-look-cover.jpg": gta6ExtendedLookCover,
+  "gta6-extened-look-01.jpg": gta6ExtendedLook01,
+  "gta6-extened-look-02.jpg": gta6ExtendedLook02,
+  "gta6-extened-look-03.jpg": gta6ExtendedLook03,
+  "gta6-extened-look-04.jpg": gta6ExtendedLook04,
 
   // LifeInvader images
   "lifeinvader-ads-policy.jpg": lifeinvaderAdsPolicy,
@@ -38,6 +51,11 @@ export const imageRegistry = {
   "roleplay-fairplay-rules.jpg": roleplayFairplayRules,
   "roleplay-general-rules.jpg": roleplayGeneralRules,
   "roleplay-how-to-make-money.jpg": roleplayHowToMakeMoney,
+
+  // family images
+  "family-10-ranking-system.jpg": family10RankSystem,
+  "family-7-ranking-system.jpg": family7RankSystem,
+  "family-events-system.jpg": familyEventsSystem,
 } satisfies Record<string, StaticImageData>;
 
 /** Autocomplete-friendly union of every registered local image key. */

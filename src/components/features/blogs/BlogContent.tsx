@@ -30,6 +30,8 @@ const BlogContent = ({ blocks }: BlogContentProps) => {
         }
 
         if (block.type === "image") {
+          console.log(block.src);
+
           return (
             <figure key={key} className="li-blog-content__figure">
               <div className="li-blog-content__image-wrapper">

@@ -31,7 +31,7 @@ export const gta6ExtendedLookConfig: BlogPost = {
     },
     {
       type: "image",
-      src: "https://images.unsplash.com/photo-1746653776326-282757d666c1?auto=format&fit=crop&w=1600&q=80",
+      src: "gta6-extened-look-01.jpg",
       alt: "Pastel art deco buildings and palm trees, evoking a Miami-style coastline",
       caption:
         "Illustrative mood photography of pastel art-deco architecture — not an official Rockstar screenshot.",
@@ -57,7 +57,7 @@ export const gta6ExtendedLookConfig: BlogPost = {
     },
     {
       type: "image",
-      src: "https://images.unsplash.com/photo-1715733965672-5c6a4c450f1e?auto=format&fit=crop&w=1600&q=80",
+      src: "gta6-extened-look-02.jpg",
       alt: "A dark sports car parked on a city street at night",
       caption:
         "Illustrative stock photography of a night-time street scene — not official GTA 6 footage.",
@@ -91,7 +91,7 @@ export const gta6ExtendedLookConfig: BlogPost = {
     },
     {
       type: "image",
-      src: "https://images.unsplash.com/photo-1698812004183-2c13601de23e?auto=format&fit=crop&w=1600&q=80",
+      src: "gta6-extened-look-03.jpg",
       alt: "A busy neon-lit city street at night",
       caption:
         "Illustrative neon-city mood photography — evocative of Leonida's nightlife, not an in-game capture.",

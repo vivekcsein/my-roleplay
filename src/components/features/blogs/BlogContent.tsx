@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getImageSrc } from "@/packages/utils/get-image";
 import type { BlogContentBlock } from "@/types/blog";
 
 interface BlogContentProps {
@@ -30,13 +31,11 @@ const BlogContent = ({ blocks }: BlogContentProps) => {
         }
 
         if (block.type === "image") {
-          console.log(block.src);
-
           return (
             <figure key={key} className="li-blog-content__figure">
               <div className="li-blog-content__image-wrapper">
                 <Image
-                  src={block.src}
+                  src={getImageSrc(block.src) ?? block.src}
                   alt={block.alt}
                   fill
                   sizes="(min-width: 768px) 720px, 100vw"

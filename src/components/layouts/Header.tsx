@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { navLinks } from "@/packages/configs/data.config";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   return (
@@ -16,6 +17,7 @@ const Header = () => {
           </a>
         ))}
       </div>
+      <ThemeToggle />
     </nav>
   );
 };

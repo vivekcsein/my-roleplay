@@ -1,533 +1,205 @@
-# 🎖️ Family Ranking System
+# Family Rank System
 
-## Overview
-
-The **Family Ranking System** is designed to create a clear hierarchy based on **loyalty, activity, skill, responsibility, leadership, and contribution**.
-
-Every rank represents a different level of trust and responsibility. Members are expected to understand their role, follow family rules, remain active, and continuously improve.
-
-### 🏆 Rank Structure
-
-| Rank | Position                                      | Primary Focus             |
-| ---- | --------------------------------------------- | ------------------------- |
-| 1    | 👶 Fresher / Suspended                        | Learning & Observation    |
-| 2    | 📚 Rookie / Hustler                           | Development & Adaptation  |
-| 3    | 🤝 Family Loyalist                            | Loyalty & Activity        |
-| 4    | 🔫 Turfer / Shooter                           | Combat & Events           |
-| 5    | ⚔️ Master / HRT Support                       | Support & Management      |
-| 6    | 🛡️ Boss / Under Deputy                        | Recruitment & Operations  |
-| 7    | 🎯 Deputy / Main Commander                    | Command & Strategy        |
-| 8    | 💼 High Command / Financial & Strategic Brain | Finance & Strategy        |
-| 9    | 🕊️ Founder / Co-Founder                       | Stability & Family Growth |
-| 10   | 👑 Leader                                     | Supreme Leadership        |
+Ten ranks. Each one is a bigger job with more to do. Move up by putting in the work, not by waiting around.
 
 ---
 
-# 1️⃣ Fresher — New Entry
+## Rank Overview
 
-### 🎭 Role
-
-**Observation • Understanding • First Step**
-
-### 📌 Status
-
-The Fresher is a new member beginning their journey within the family.
-
-### 📚 Required Knowledge
-
-A Fresher should learn:
-
-- 🗺️ The GTA-5 RP map and important locations
-- ❤️ EMS
-- 💲 24/7
-- ⛽ Fuel Stations
-- 🅿️ Parking locations
-- 🟢 Green Zones
-- 🔴 Red Zones
-- 🏖️ Beach Market
-- 📱 Purchase a 7-digit SIM card
-- 🎒 Upgrade backpack to **Level 2**
-
-### 📋 Responsibilities
-
-- 🎭 Follow proper Roleplay (RP) at all times
-- 🤐 Do not punch, abuse, or troll other players
-- 💬 Communicate respectfully in Family Chat and IC Chat
-- 👀 Observe experienced members and learn family behavior
-- 🌱 Focus on learning before seeking higher responsibilities
-
-### 🛡️ Authority
-
-- Beginning stage of the family
-- Learning and growth phase
-- Rule-breaking or immature behavior can result in **blacklisting from the family**
+| #   | Rank                    | Job                          |
+| --- | ----------------------- | ---------------------------- |
+| 01  | Fresher / Prospect      | Learn the ropes              |
+| 02  | Rookie / Hustler        | Get comfortable, stay active |
+| 03  | Family Loyalist         | Show up, help out            |
+| 04  | Shooter                 | Fight-ready                  |
+| 05  | Master / HRT Support    | Logistics & event support    |
+| 06  | Turfer / Hitman         | Top combat squad             |
+| 07  | Boss / Under Deputy     | Recruitment & operations     |
+| 08  | Deputy / Main Commander | Command & strategy           |
+| 09  | Founder / Co-Founder    | Finance & stability          |
+| 10  | Leader                  | Runs the whole family        |
 
 ---
 
-# 2️⃣ Rookie — Learner & Future Asset
+## 01 — Fresher / Prospect
 
-### 🎭 Role
+New in. You're here to watch, learn, and stay out of trouble.
 
-**Learning • Adapting • Improving**
+**Do:**
 
-### 📌 Status
+- Learn the rules and how things run
+- Stay active
+- Follow instructions
+- Keep it respectful
 
-A Rookie is a developing member who is preparing to become a valuable family asset.
-
-### 📚 Required Knowledge
-
-- ⏳ Learn the Office Task
-- 🎯 Understand Battle-Pass Tasks and beginner jobs
-- 🏠 Know the Family House location
-  - `M Menu → Statics → Mark House`
-
-- 🌏 Track nearby family members
-  - `M Menu → Family → Managing Family`
-  - `Display Family Member Nearby → ON`
-
-- 📍 Understand how to set the Family Meeting Point
-  - `M Menu → Family → Managing Family`
-  - `Setup Meeting Point`
-
-### 📍 Meeting Point System
-
-- **Single Meeting Point:** No reaction is required
-- **Multiple Meeting Points:** Members must react and reach the location
-
-### 🚗 Car Wash System
-
-Understand the **Car Wash System** to prevent family vehicles from getting stuck, lost, or causing problems when vehicles are recalled by another member.
-
-### 📋 Responsibilities
-
-- 💬 Stay connected with HRT members
-- 🎧 Learn Family Chat and voice communication
-- 🧩 Adapt to family culture
-- 📈 Focus on leveling up
-- 🎧 join family Discord to unlock and join Voice Chat
-
-### 🛡️ Authority
-
-- High promotion potential
-- Under observation by HRT
-- Inactivity can result in removal from the family
+**Promotion:** No fixed quota yet — just show consistent activity and decent behavior. Once you're reliable, you move to Rookie.
 
 ---
 
-# 3️⃣ Family Loyalist — Trusted Active Member
+## 02 — Rookie / Hustler
 
-### 🎭 Role
+You know the basics. Now build on them.
 
-**Loyalty • Activity • Support**
+**Do:**
 
-### 📌 Status
+- Learn locations, vehicles, Discord setup
+- Get familiar with events
+- Keep communicating with the team
 
-A trusted and dependable member who represents the strength and culture of the family.
-
-### 📌 Requirements
-
-- 🆔 Join the family Discord with proper ID and IC age information
-- 📈 Minimum **IC Age 3–5** to achieve this rank
-- 🎒 Minimum **Backpack Level 3**
-- 👤 Choose a Boss and maintain communication with them
-- ✍️ Change your sirname to **Family Tag/Sirname**.
-
-### 📌 Skills need to be improved
-
-- 🍓 Collect Mushrooms & Strawberries to upgrade Fossil Map level
-- Need to learn Shooting. Do 1v1 with other members to improve your skills.
-
-### 📋 Responsibilities
-
-- 🤐 Remain disciplined and active
-- 🎪 Participate in family activities whenever possible
-- 🤝 Maintain teamwork and respect
-- 🧩 Adapt to family culture and leadership
-- 📈 Continuously improve skills and behavior
-
-### 🛡️ Authority
-
-- Recognized as a trusted inner member
-- Beginning the climb toward leadership excellence
-- Inactivity means **no promotion**
+**Promotion:** Stay active. Inactivity is what kills your progress here — nothing else needed.
 
 ---
 
-# 4️⃣ Turfer / Shooter — Shooter & Battle Force
+## 03 — Family Loyalist
 
-### 🎭 Role
+You're a regular now — part of the daily grind.
 
-**Attack • Defense • Reliability**
+**Do:**
 
-### 📌 Status
+- Join patrols and daily activity
+- Show up for events
+- Help newer members
 
-A trusted family fighter capable of representing the family during battles and turf events.
+**Promotion — weekly minimum:**
 
-### 📚 Requirements
-
-- 🎮 Minimum IC **Level 5+**
-- 🔫 Must have **Revolver skill**
-- 🎯 Must earn Event Leader / Family Leader approval to qualify as a Shooter
-- 👮 Experience with LEOs is considered a plus
-
-### 📋 Responsibilities
-
-- 🎯 Attend:
-  - **5 IC Events minimum**
-  - **10 OOC Events minimum**
-  - **2 Unofficial Events weekly**
-  -
-
-- 🎯 Stay connected with the Event Team
-- 🤝 Coordinate during turf wars and family battles
-- 📢 Follow event management instructions
-- 🛡️ Represent the family with loyalty and maturity
-
-### 🛡️ Authority
-
-- Trusted battle force of the family
-- Recognized as a reliable fighter
-- Failure in duty can result in **demotion**
-
-### 💰 Benefits
-
-- 💵 Up to **$100,000/week**, performance-based
-- 🧥 Priority access to armor and weapons
-- 📈 Fast promotion path for strong performers
-- 🚘 Exclusive access to:
-  - Bugatti Chiron
-  - Rolls-Royce
+- IC level 5
+- 5 OOC events
+- 1 IC event
+- 3 informals
 
 ---
 
-# 5️⃣ Master — Elite Management & Support
+## 04 — Shooter
 
-### 🎭 Role
+Combat starts here.
 
-**Combat • Support • Precision**
+**Do:**
 
-### 📌 Status
+- Join practice turfs and fights
+- Work on aim, positioning, movement
+- Follow Turfer/Hitman leads
+- Communicate during events
 
-An advanced and independent member trusted with daily support, combat, and guidance.
+**Promotion — weekly minimum:**
 
-### 📌 Requirements
-
-- 📈 Minimum **IC Age 8–10**
-- 📖 Read and acknowledge all important family rules
-- 🎪 Know family events and event rules
-- 📝 HRT members must complete at least **3 recruitments & approvals weekly**
-- 🧠 Understand the complete family structure, ranks, and leadership system
-- 🧱 Fossil Map Level 2 is recommended
-  - Required for collecting scrap metal used for Body Armour Plates
-
-### 📋 Responsibilities
-
-- 🎯 Attend:
-  - **5 IC Events minimum**
-  - **5 OOC Events minimum**
-  - **2 Unofficial Events weekly**
-
-- 🧭 Guide newcomers and mid-level members
-- 🎯 Support Bosses and Deputies
-- ⚔️ Be ready for combat when required
-- 🛡️ Protect family discipline and reputation
-- 📈 Maintain strong performance
-
-### ⭐ Priority Level
-
-The Master rank has higher priority than the Turfer rank and acts as a bridge between fighters and leadership.
-
-### 🛡️ Authority
-
-- Highly respected combat/support position
-- Represents strength, skill, and responsibility
-- Weak discipline can result in a warning
-- Failure in duty can result in a warning from HC
-
-### 💎 Benefits
-
-- 😌 More freedom to play while remaining within rules
-- 🚘 Exclusive access to:
-  - Ferrari
-  - Lamborghini
+- IC level 10
+- 10 OOC events
+- 2 IC events
+- 5 informals
 
 ---
 
-# 6️⃣ Boss — Under Deputy
+## 05 — Master / HRT Support
 
-### 🎭 Role
+You're the link between combat and management. Keep the team running.
 
-**Recruitment • Structure • Efficiency**
+**Do:**
 
-### 📌 Status
+- Supply weapons/armor and event resources
+- Maintain family vehicles
+- Support HRT with recruitment
+- Train newer members
+- Back up Operations Bosses
 
-A core management position responsible for recruitment, discipline, training, and operational coordination.
+**Promotion — weekly minimum:**
 
-### 📋 Responsibilities
-
-- 🎯 Attend:
-  - **5 IC Events minimum**
-  - **5 OOC Events minimum**
-  - **2 Unofficial Events weekly**
-
-- 🚚 Secondary responsibility for bringing the ammunition vehicle near event zones
-- 📝 Complete at least **5 recruitments & approvals**
-- 👥 Maintain a team of **5 active members**
-- 🏢 Distribute guns, armor, and ammunition during events
-- 🚗 Wash family cars every **2 hours** to avoid fines
-- 🧑‍🏫 Train upcoming leaders
-- 🤝 Coordinate Masters, Turfers.
-- 🛡️ Ensure proper event discipline and formations
-
-### 🛡️ Authority
-
-- Controls entry and member growth
-- Acts as a backbone of the organization
-- Weak discipline can result in a **Strike**
-- Failure in duty can result in **demotion**
-
-### 💰 Benefits
-
-- 💵 Up to **$200,000/week**, performance-based
-- 🎁 Monthly top performer:
-  - **+50 GC Battlepass OR $1,000,000**
-
-- 🧥 Extra armor and weapon access
-- 🚘 Exclusive access to:
-  - Pegassi
-  - Veyron
+- IC level 10
+- 15 OOC events
+- 2 IC events
+- 10 informals
+- 2 member invites (must reach IC level 5, must stay active — inactive invites get removed)
 
 ---
 
-# 7️⃣ Deputy — Main Commander
+## 06 — Turfer / Hitman
 
-### 🎭 Role
+Top 5–10 combat members. This is the elite squad.
 
-**Planning • Execution • Discipline**
+**Do:**
 
-### 📌 Status
+- Lead in major turfs and high-stakes events
+- Protect teammates during ops
+- Coordinate with other shooters
+- Train Shooters coming up
 
-An elite commander responsible for strategy, event execution, coordination, and discipline.
+**Selection is based on:** aim, combat performance, game knowledge, teamwork, event record, reliability.
 
-### 📋 Responsibilities
-
-- 🎯 Participate in:
-  - **5 IC Events minimum**
-  - **5 OOC Events minimum**
-  - **2 Unofficial Events weekly**
-
-- 📍 Set meeting points
-- 🔭 Deploy scout teams
-- 🧩 Command event teams
-- ⚔️ Take responsibility for attacks
-- 🚚 Primary responsibility for bringing the ammunition vehicle near event zones
-- 🛡️ Lead during critical situations
-- 🤝 Coordinate Bosses, Masters, and Turfers
-- 📢 Maintain clear communication before and during operations
-
-### 🛡️ Authority
-
-- Commands participants during events
-- Holds direct trust of High Command
-- Indiscipline can result in a **Strike**
-- Disobedience can result in a **Strike**
-
-### 💰 Benefits
-
-- 💵 Up to **$300,000/week**, performance-based
-- 🎁 Monthly top performer:
-  - **+150 GC Battlepass OR $3,000,000**
-
-- 🧥 Extra armor and weapon access
-- 🚘 Exclusive access to:
-  - Progen P1
-  - Ferrari Evo
-  - Bugatti Divo
+**Promotion:** No fixed quota — selection is by performance review from leadership.
 
 ---
 
-# 8️⃣ High Command — Financial & Strategic Brain
+## 07 — Boss / Under Deputy
 
-### 🎭 Role
+Runs day-to-day operations. Bridge between the Deputy and everyone below.
 
-**Finance • Strategy • Stability**
+**Do:**
 
-### 📌 Status
+- Manage active members, track who's active/inactive
+- Handle recruitment and onboarding
+- Organize daily activity
+- Pass Deputy instructions down
+- Flag problems up
+- Spot who's ready for promotion
 
-A trusted financial controller and executive advisor responsible for the family's economic and organizational stability.
-
-### 📋 Responsibilities
-
-- 🎯 Attend:
-  - **5 IC Events minimum**
-  - **5 OOC Events minimum**
-  - **2 Unofficial Events weekly**
-
-- 💰 Manage family funds, rewards, and prize pools
-- 📦 Ensure fair resource distribution
-- 📜 Check logs daily
-- 👤 Remove roles from members who leave the family
-- 🖥️ Manage Discord structure and permissions
-- 🤝 Handle alliances
-- 💡 Encourage new plans and ideas
-- 🧮 Maintain family economic stability
-- 🧠 Support the Founder with strategic decisions
-
-### 🛡️ Authority
-
-- 🏦 Controls financial resources
-- 🗣️ Has significant influence within leadership
-- ⚠️ Indiscipline can result in a **Strike**
-- 🚫 Serious cases can result in **blacklisting from High Command**
-- 💰 Misuse of family funds can result in **demotion**
+**Promotion:** By Deputy/Leader review — based on how well you're running your people.
 
 ---
 
-# 9️⃣ Founder — Guardian of Peace & Prosperity
+## 08 — Deputy / Main Commander
 
-### 🎭 Role
+Second-in-command. You turn decisions into action.
 
-**Peace • Stability • Leadership Support**
+**Do:**
 
-### 📌 Status
+- Command major operations
+- Plan events: teams, meeting points, deployment, execution
+- Coordinate Bosses, Turfers, Masters, and Shooters
+- Handle event logistics
+- Train future leadership
+- Report to the Leader
 
-The Founder is a pillar of wisdom and an important protector of the family's internal balance.
-
-The Founder helps keep the family united, stable, respected, and moving forward.
-
-### 📋 Responsibilities
-
-- 🚗 Add cars, helicopters, and valuable assets to the family
-- 💰 Contribute additional funding when necessary
-- 🎯 Attend at least **5 Important Events weekly**
-- 🎪 Normal events are not mandatory
-- 🕊️ Maintain peace and family unity
-- 🧠 Support strategic decisions with leadership
-- 🛡️ Protect family dignity and reputation
-- ⚔️ Resolve internal conflicts fairly
-- ⭐ Motivate leadership ranks
-- 🤝 Strengthen family relationships
-- 🌱 Promote family growth and positive culture
-
-### 🛡️ Authority
-
-- Highly respected family personality
-- Disrespect can result in **blacklisting**
-- Holds final authority regarding peace and internal stability
+**Promotion:** Direct appointment by the Leader.
 
 ---
 
-# 🔟 Leader — Owner of the Family
+## 09 — Founder / Co-Founder
 
-### 🎭 Role
+Senior leadership. Keeps the family financially strong and stable.
 
-**Legacy • Supreme Power • Ultimate Responsibility**
+**Do:**
 
-### 📌 Status
+- Support the Leader on major calls
+- Manage finances and valuable assets
+- Handle server relationships and alliances
+- Advise leadership
+- Help settle internal disputes
 
-The **Leader** is the true owner of the family.
-
-The Leader's responsibility is not simply to hold the highest rank, but to protect the family, its reputation, its members, assets, and long-term legacy.
-
-### 📋 Responsibilities
-
-- 👑 Own family assets and ammunition
-- 🛡️ Protect the family name and reputation
-- 🧾 Handle sensitive matters carefully
-- 📜 Maintain clean logs and unofficial status
-- 🤝 Manage high-level alliances and diplomacy
-- 🧠 Make critical family decisions
-- 🕊️ Act as guardian and mentor for the leadership team
-- 🌱 Protect the long-term future and legacy of the family
-
-### 🛡️ Authority
-
-- 📞 Only Leaders/Deputies may request the family's utility
-- 🚫 Disrespect can result in **blacklisting**
-- ❤️ Loyalty to the Leader represents loyalty to the family
-- 🔝 Holds the highest authority with the greatest responsibility
+**Promotion:** Direct appointment by the Leader.
 
 ---
 
-# 📈 Promotion Philosophy
+## 10 — Leader
 
-Promotion is **not based only on time spent in the family**.
+Final call on everything.
 
-Members should demonstrate:
+**Do:**
 
-### ❤️ Loyalty
-
-Consistent dedication to the family and its members.
-
-### 🎯 Activity
-
-Regular participation in family activities and events.
-
-### 🧠 Knowledge
-
-Understanding of the game, family systems, events, and responsibilities.
-
-### 🤝 Teamwork
-
-Ability to communicate, cooperate, and support other members.
-
-### 🛡️ Discipline
-
-Respect for family rules, leadership, and other players.
-
-### 📈 Performance
-
-Demonstrated ability to perform the responsibilities of the next rank.
-
-### 👑 Leadership
-
-For higher ranks, members must demonstrate maturity, decision-making, responsibility, and the ability to lead others.
+- Make the big decisions
+- Protect the family's name
+- Set the long-term direction
+- Manage alliances and major resources
+- Handle serious conflicts
+- Build and mentor the leadership team
 
 ---
 
-# ⚠️ Demotion & Disciplinary System
+## Promotion Path
 
-Higher rank means **higher responsibility**.
-
-Depending on the situation, violations may result in:
-
-1. ⚠️ **Warning**
-2. 🟠 **Strike**
-3. ⬇️ **Demotion**
-4. 🚫 **Removal from position**
-5. ⛔ **Blacklist from High Command**
-6. ❌ **Blacklist from the Family**
-
-Discipline should be based on the seriousness of the incident, repeated behavior, and the member's overall contribution.
-
----
-
-# 🏆 The Family Growth Path
-
-```text
-👶 Fresher
-     ↓
-📚 Rookie
-     ↓
-🤝 Family Loyalist
-     ↓
-🔫 Turfer / Shooter
-     ↓
-⚔️ Master
-     ↓
-🛡️ Boss
-     ↓
-🎯 Deputy
-     ↓
-💼 High Command
-     ↓
-🕊️ Founder
-     ↓
-👑 Leader
+```
+Fresher → Rookie → Loyalist → Shooter → Master
+   → Turfer → Boss → Deputy → Founder → Leader
 ```
 
-### ❤️ Remember
+Ranks 1–3 are about getting active and known. Ranks 4–6 are about combat and support. Rank 7 is your first real management job. Ranks 8–10 are leadership — strategy, command, and running the show.
 
-**A rank is not a privilege — it is a responsibility.**
-
-The higher you rise, the more you are expected to **lead, support, protect, and contribute to the family.**
+Higher rank = more work, more say, more people relying on you. Simple as that.

@@ -90,6 +90,36 @@
   }
 }
 
+.rp-nav__theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+
+  color: var(--foreground);
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  transition:
+    background 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease;
+}
+
+.rp-nav__theme-toggle:hover {
+  color: var(--primary);
+  border-color: color-mix(in srgb, var(--primary) 40%, var(--border));
+}
+
+.rp-nav__theme-toggle-placeholder {
+  width: 18px;
+  height: 18px;
+}
+
 /* ---------- BUTTONS ---------- */
 .rp-btn {
   font-family: var(--font-body);

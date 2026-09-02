@@ -2,8 +2,8 @@
 
 import { Shirt } from "lucide-react";
 import Input from "@/components/ui/inputs/LifeInvaderInput";
+import { useClothingAdForm } from "@/packages/hooks/ads/useClothingAdForm";
 import { useAdData } from "@/packages/hooks/useAdData";
-import { useClothingAdForm } from "@/packages/hooks/useClothingAdForm";
 import AutocompleteInput from "../shared/AutocompleteInput";
 import CheckboxPill from "../shared/CheckboxPill";
 import FieldGroup from "../shared/FieldGroup";

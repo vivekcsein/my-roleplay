@@ -225,6 +225,29 @@ export const docsConfig = {
         "gtao",
       ],
     },
+    {
+      key: "family-bonus-system",
+      title: "Family Bonus System",
+      description:
+        "A comprehensive guide to the bonus system used by the GTA RP Top Families.",
+      slug: "family-bonus-system",
+      docPath: "family-bonus-system",
+      coverImage: "family-bonus-system.jpg",
+      file: getFilePath(`${path}/family-bonus-system.md`),
+      createdAt: "22/08/2026",
+      updatedAt: "22/08/2026",
+      keywords: [
+        "family",
+        "bonus",
+        "system",
+        "guide",
+        "game",
+        "games",
+        "community",
+        "gta",
+        "gtao",
+      ],
+    },
   ],
 } satisfies {
   key: string;

@@ -14,6 +14,7 @@ import lifeinvaderAdsPolicy from "@/assets/images/lifeinvader/lifeinvader-ads-po
 // family images
 import family7RankSystem from "@/assets/images/roleplay/family-7-ranking-system.jpg";
 import family10RankSystem from "@/assets/images/roleplay/family-10-ranking-system.jpg";
+import familyBonusSystem from "@/assets/images/roleplay/family-bonus-system.jpg";
 import familyEventsSystem from "@/assets/images/roleplay/family-events-system.jpg";
 // Roleplay images
 import roleplayBasicTerms from "@/assets/images/roleplay/roleplay-basic-terms.jpg";
@@ -56,6 +57,7 @@ export const imageRegistry = {
   "family-10-ranking-system.jpg": family10RankSystem,
   "family-7-ranking-system.jpg": family7RankSystem,
   "family-events-system.jpg": familyEventsSystem,
+  "family-bonus-system.jpg": familyBonusSystem,
 } satisfies Record<string, StaticImageData>;
 
 /** Autocomplete-friendly union of every registered local image key. */

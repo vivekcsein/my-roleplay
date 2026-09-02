@@ -27,6 +27,7 @@ export const useItemsAdForm = () => {
   const [trading, setTrading] = useState(false);
   const [isBulk, setIsBulk] = useState(false);
   const [respectively, setRespectively] = useState(false);
+  const [perUnit, _setPerUnit] = useState(false);
   const [items, setItems] = useState<ItemEntry[]>([makeEntry(nextId())]);
   const [prices, setPrices] = useState<string[]>([""]);
 
@@ -89,22 +90,33 @@ export const useItemsAdForm = () => {
     }
 
     const label = transaction === "Buying" ? "Budget" : "Price";
+    const eachSuffix = (item: ItemEntry) =>
+      perUnit && Number.parseInt(item.quantity, 10) > 1 ? " each" : "";
 
     if (activeItems.length > 1 && respectively) {
-      const priceTexts = activeItems.map((_, i) =>
-        formatPrice(prices[i] ?? "", transaction, label).replace(
-          `${label}: `,
-          "",
-        ),
+      const priceTexts = activeItems.map(
+        (item, i) =>
+          formatPrice(prices[i] ?? "", transaction, label).replace(
+            `${label}: `,
+            "",
+          ) + eachSuffix(item),
       );
       body += `. ${label}: ${priceTexts.join(", ")} respectively`;
     } else {
       const priceText = formatPrice(prices[0] ?? "", transaction, label);
-      body += `. ${priceText}`;
+      body += `. ${priceText}${eachSuffix(activeItems[0])}`;
     }
 
     return ensureTerminalPeriod(cleanSpacing(body));
-  }, [activeItems, isBulk, trading, transaction, respectively, prices]);
+  }, [
+    activeItems,
+    isBulk,
+    trading,
+    transaction,
+    respectively,
+    perUnit,
+    prices,
+  ]);
 
   return {
     transaction,

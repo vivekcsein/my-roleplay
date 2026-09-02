@@ -12,6 +12,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       data-scroll-behavior="smooth"
       className={`h-full antialiased`}
+      suppressHydrationWarning={true}
     >
       <head>
         {/* No-flash dark enforcement is handled by next-themes' own
